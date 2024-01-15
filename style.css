@@ -32,7 +32,7 @@ h2 {
 }
 
 section {
-    padding-top: 33px;
+    padding-top: 32px;
     padding-left: 60px;
 }
 
@@ -54,7 +54,8 @@ section {
     margin-right: 24px;
 }
 
-.form-control, .form-select {
+.form-control,
+.form-select {
     padding: 12px 16px;
     border-radius: 8px;
 }
@@ -70,15 +71,44 @@ section {
 hr {
     background-color: #3a3a3a;
     max-width: 648px;
-    margin: 0;
+    margin: 0px 60px;
 }
 
-h3{
+h3 {
     font-family: 'Poppins';
     font-weight: 700;
     font-size: 18px;
+    margin-bottom: 16px;
 }
-.form-check-label{
+
+.form-check-label {
     font-family: 'Poppins';
     color: #3a3a3a;
+}
+
+#FamíliaAprender {
+    display: flex;
+    margin-bottom: 32px;
+}
+
+#aprendizado {
+    width: 424px;
+}
+
+#família {
+    margin-right: 24px;
+}
+
+.list-check {
+    display: flex;
+    flex-wrap: wrap;
+    /* flex: 1 1 120px; */
+}
+
+.check {
+    width: 120px;
+    margin-right: 32px;
+}
+.form-check{
+    margin: 8px 0px;
 }
