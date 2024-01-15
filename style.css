@@ -1,0 +1,84 @@
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 60px;
+    background-color: #FFB800;
+}
+
+h1 {
+    font-family: 'Marcellus';
+    line-height: 24px;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.btn-outline-primary {
+    font-family: 'Marcellus';
+    border: 2px solid black;
+    color: black;
+}
+
+.btn-outline-primary:hover {
+    border: 2px solid black;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+h2 {
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 24px;
+}
+
+section {
+    padding-top: 33px;
+    padding-left: 60px;
+}
+
+.form {
+    display: flex;
+    max-width: 648px;
+    flex-wrap: wrap;
+    font-family: 'Poppins';
+    font-size: 16px;
+    margin: 32px 0;
+}
+
+.inputs-width {
+    width: 312px;
+    color: red;
+}
+
+.inputs-width:nth-child(odd) {
+    margin-right: 24px;
+}
+
+.form-control, .form-select {
+    padding: 12px 16px;
+    border-radius: 8px;
+}
+
+
+.label-input {
+    font-size: 12px;
+    font-family: 'Poppins';
+    color: #3a3a3a;
+    margin-left: 8px;
+}
+
+hr {
+    background-color: #3a3a3a;
+    max-width: 648px;
+    margin: 0;
+}
+
+h3{
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 18px;
+}
+.form-check-label{
+    font-family: 'Poppins';
+    color: #3a3a3a;
+}
