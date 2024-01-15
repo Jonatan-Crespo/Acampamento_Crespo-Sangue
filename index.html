@@ -19,88 +19,152 @@
         <h1>Acampamento <br>Crespo-Sangue</h1>
         <button class="btn btn-outline-primary">Login</button>
     </header>
-    <main>
-        <section id="FormulárioAvaliação">
-            <h2>Formulário de avaliação</h2>
-            <form action="form" class="form">
-                <div class="mb-3 inputs-width">
-                    <label for="name" class="label-input">Nome</label>
-                    <input type="text" id="name" name="name" class="form-control" placeholder="Digite seu nome">
-                </div>
-                <div class="mb-3 inputs-width">
-                    <label for="sobrenome" class="label-input">Sobrenome</label>
-                    <input type="text" id="sobrenome" name="sobrenome" class="form-control"
-                        placeholder="Digite seu sobrenome">
-                </div>
-                <div class="mb-3 inputs-width">
-                    <label for="email" class="label-input">E-mail</label>
-                    <input type="email" id="email" name="email" class="form-control" placeholder="Digite seu e-mail">
-                </div>
-                <div class="mb-3 inputs-width">
-                    <label for="chale" class="label-input">Chalés</label>
-                    <select id="chale" name="chale" class="form-select" aria-label="Selecione seu chalé">
-                        <option selected>Selecione seu chalé</option>
-                        <option value="GitZeus">GitZeus</option>
-                        <option value="GitZeus">GitZeus</option>
-                        <option value="GitZeus">GitZeus</option>
-                        <option value="GitZeus">GitZeus</option>
-                        <option value="GitZeus">GitZeus</option>
-                        <option value="GitZeus">GitZeus</option>
-                    </select>
-                </div>
-            </form>
-        </section>
-        <hr>
-        <section id="FamíliaAprender">
-            <div id="família">
-                <h3>Qual sua família?</h3>
-                <form>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" id="frontend" name="frontend" value="frontend">
-                        <label class="form-check-label" for="frontend">Família Frontend</label>
+    <main class="content">
+        <div>
+            <section id="FormulárioAvaliação">
+                <h2>Formulário de avaliação</h2>
+                <form action="form" class="form">
+                    <div class="mb-3" style="width: 312px; margin-right: 24px;">
+                        <label for="name" class="label-input">Nome</label>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Digite seu nome">
                     </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" id="backend" name="backend" value="backend">
-                        <label class="form-check-label" for="backend">Família Backend</label>
+                    <div class="mb-3" style="width: 312px;">
+                        <label for="sobrenome" class="label-input">Sobrenome</label>
+                        <input type="text" id="sobrenome" name="sobrenome" class="form-control"
+                            placeholder="Digite seu sobrenome">
                     </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" id="fullstack" name="fullstack" value="fullstack">
-                        <label class="form-check-label" for="fullstack">Família Fullstack</label>
+                    <div class="mb-3" style="width: 312px; margin-right: 24px;">
+                        <label for="email" class="label-input">E-mail</label>
+                        <input type="email" id="email" name="email" class="form-control"
+                            placeholder="Digite seu e-mail">
+                    </div>
+                    <div class="mb-3" style="width: 312px;">
+                        <label for="chale" class="label-input">Chalés</label>
+                        <select id="chale" name="chale" class="form-select" aria-label="Selecione seu chalé">
+                            <option selected>Selecione seu chalé</option>
+                            <option value="GitZeus">GitZeus</option>
+                            <option value="GitZeus">GitZeus</option>
+                            <option value="GitZeus">GitZeus</option>
+                            <option value="GitZeus">GitZeus</option>
+                            <option value="GitZeus">GitZeus</option>
+                            <option value="GitZeus">GitZeus</option>
+                        </select>
                     </div>
                 </form>
-            </div>
-            <div id="aprendizado">
-                <h3>Qual conteúdo você está com mais vontade de aprender?</h3>
-                <form class="list-check">
-                    <div class="form-check check">
-                        <input type="checkbox" name="HoFs" id="HoFs" class="form-check-input">
-                        <label for="HoFs" class="form-check-label">HoFs</label>
+            </section>
+            <hr>
+            <section id="FamíliaAprender">
+                <div id="família" style="margin-right: 24px;">
+                    <h3>Qual sua família?</h3>
+                    <form>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="frontend" name="frontend" value="frontend">
+                            <label class="form-check-label" for="frontend">Família Frontend</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="backend" name="backend" value="backend">
+                            <label class="form-check-label" for="backend">Família Backend</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="fullstack" name="fullstack"
+                                value="fullstack">
+                            <label class="form-check-label" for="fullstack">Família Fullstack</label>
+                        </div>
+                    </form>
+                </div>
+                <div id="aprendizado" style="width: 424px;">
+                    <h3>Qual conteúdo você está com mais vontade de aprender?</h3>
+                    <form class="list-check">
+                        <div class="form-check check">
+                            <input type="checkbox" name="HoFs" id="HoFs" class="form-check-input">
+                            <label for="HoFs" class="form-check-label">HoFs</label>
+                        </div>
+                        <div class="form-check check">
+                            <input type="checkbox" name="Jest" id="Jest" class="form-check-input">
+                            <label for="Jest" class="form-check-label">Jest</label>
+                        </div>
+                        <div class="form-check check">
+                            <input type="checkbox" name="Promises" id="Promises" class="form-check-input">
+                            <label for="Promises" class="form-check-label">Promises</label>
+                        </div>
+                        <div class="form-check check">
+                            <input type="checkbox" name="React" id="React" class="form-check-input">
+                            <label for="React" class="form-check-label">React</label>
+                        </div>
+                        <div class="form-check check">
+                            <input type="checkbox" name="SQL" id="SQL" class="form-check-input">
+                            <label for="SQL" class="form-check-label">SQL</label>
+                        </div>
+                        <div class="form-check check">
+                            <input type="checkbox" name="Python" id="Python" class="form-check-input">
+                            <label for="Python" class="form-check-label">Python</label>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <hr>
+            <section id="NPS-Comentarios">
+                <div id="família">
+                    <h3>Como você avalia o Acampamento Crespo-Sangue?</h3>
+                    <form class="NPS">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="Um" name="Um" value="Um">
+                            <label class="form-check-label" for="Um">1</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="Dois" name="Dois" value="Dois">
+                            <label class="form-check-label" for="Dois">2</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="Três" name="Três" value="Três">
+                            <label class="form-check-label" for="Três">3</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="Quatro" name="Quatro" value="Quatro">
+                            <label class="form-check-label" for="Quatro">4</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="Cinco" name="Cinco" value="Cinco">
+                            <label class="form-check-label" for="Cinco">5</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="Seis" name="Seis" value="Seis">
+                            <label class="form-check-label" for="Seis">6</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="Sete" name="Sete" value="Sete">
+                            <label class="form-check-label" for="Sete">7</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="Oito" name="Oito" value="Oito">
+                            <label class="form-check-label" for="Oito">8</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="Nove" name="Nove" value="Nove">
+                            <label class="form-check-label" for="Nove">9</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="Dez" name="Dez" value="Dez">
+                            <label class="form-check-label" for="Dez">10</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                        style="height: 100px; width: 648px; margin-top: 32px;"></textarea>
+                    <label for="floatingTextarea2">Deixe seu comentário</label>
+                </div>
+                <div>
+                    <div class="form-check" style="margin-top: 24px;">
+                        <input class="form-check-input" type="checkbox" id="agree" name="agree" value="agree">
+                        <label class="form-check-label" for="agree">Você concorda com o uso das informações
+                            acima?</label>
                     </div>
-                    <div class="form-check check">
-                        <input type="checkbox" name="Jest" id="Jest" class="form-check-input">
-                        <label for="Jest" class="form-check-label">Jest</label>
-                    </div>
-                    <div class="form-check check">
-                        <input type="checkbox" name="Promises" id="Promises" class="form-check-input">
-                        <label for="Promises" class="form-check-label">Promises</label>
-                    </div>
-                    <div class="form-check check">
-                        <input type="checkbox" name="React" id="React" class="form-check-input">
-                        <label for="React" class="form-check-label">React</label>
-                    </div>
-                    <div class="form-check check">
-                        <input type="checkbox" name="SQL" id="SQL" class="form-check-input">
-                        <label for="SQL" class="form-check-label">SQL</label>
-                    </div>
-                    <div class="form-check check">
-                        <input type="checkbox" name="Python" id="Python" class="form-check-input">
-                        <label for="Python" class="form-check-label">Python</label>
-                    </div>
-                </form>
-            </div>
-        </section>
-        <hr>
-        <img src="./Imagens/BRASÃO.png" class="brasao" alt="">
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </section>
+        </div>
+        <img src="./Imagens/BRASÃO.png" class="brasao">
     </main>
 
     <script src="script.js"></script>
