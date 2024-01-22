@@ -2,8 +2,13 @@ header {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 16px 60px;
     background-color: #FFB800;
+}
+
+header form {
+    display: flex;
 }
 
 h1 {
@@ -13,11 +18,19 @@ h1 {
     text-transform: uppercase;
 }
 
+.form-floating {
+    margin-right: 16px;
+    font-family: 'Poppins';
+}
+
 .btn-outline-primary {
     font-family: 'Marcellus';
     border: 2px solid black;
     color: black;
+    height: 58px;
+    text-transform: uppercase;
 }
+
 
 .btn-outline-primary:hover {
     border: 2px solid black;
@@ -29,20 +42,16 @@ h2 {
     font-family: 'Poppins';
     font-weight: 700;
     font-size: 24px;
+    margin-bottom: 16px;
+    margin-top: 32px;
 }
 
 section {
-    padding-top: 32px;
-    /* padding-left: 60px; */
-}
-
-.form {
     display: flex;
-    max-width: 648px;
     flex-wrap: wrap;
+    max-width: 648px;
     font-family: 'Poppins';
     font-size: 16px;
-    margin: 32px 0;
 }
 
 .form-control,
@@ -62,7 +71,7 @@ section {
 hr {
     background-color: #3a3a3a;
     max-width: 648px;
-    /* margin: 0px 60px; */
+    margin-bottom: 32px;
 }
 
 h3 {
@@ -77,18 +86,14 @@ h3 {
     color: #3a3a3a;
 }
 
-#FamíliaAprender {
-    display: flex;
-    margin-bottom: 32px;
-}
-
-.list-check {
+.checkbox-learning {
     display: flex;
     flex-wrap: wrap;
+    width: 480px;
 }
 
 .check {
-    width: 120px;
+    width: 130px;
     margin-right: 32px;
 }
 
@@ -96,11 +101,6 @@ h3 {
     margin: 8px 0px;
 }
 
-.NPS {
-    display: flex;
-    justify-content: space-between;
-    width: 648px;
-}
 
 .btn-primary {
     font-family: 'Marcellus';
@@ -109,13 +109,17 @@ h3 {
     border: none;
     color: black;
     width: 320px;
-    margin: 32px 0;
+    margin: 24px 0;
+    text-transform: uppercase;
 }
-.btn-primary:hover{
-    background-color: #ffe194;
+
+.btn-primary:hover {
+    background-color: #ffb800;
     color: black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.content{
+
+.content {
     display: flex;
     justify-content: space-around;
     align-items: center;
