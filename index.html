@@ -18,16 +18,18 @@
         <img src="./imagens/Pegasus.svg" alt="icone do Pegasus (Um cavalo mitólogico)">
         <h1>Acampamento <br> Crespo-Sangue</h1>
         <form action="">
-            <div class="form-floating">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                <label for="floatingInput">E-mail</label>
+            <div class="entrar">
+                <div class="form-floating">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">E-mail</label>
+                </div>
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                    <label for="floatingPassword">Senha</label>
+                </div>
+                <button class="btn btn-outline-primary">Entrar</button>
             </div>
-            <div class="form-floating">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                <label for="floatingPassword">Senha</label>
-            </div>
-            <button class="btn btn-outline-primary">Entrar</button>
-            <button class="btn btn-outline-primary" style="display: none;">Login</button>
+            <button class="btn btn-outline-primary login" style="display: none;">Login</button>
         </form>
     </header>
     <main class="content">
@@ -63,21 +65,25 @@
                 </section>
                 <hr>
                 <section>
-                    <div style="display: flex;">
-                        <div style="width: 300px;">
+                    <div class="family-learning" style="display: flex;">
+                        <div class="family" style="width: 300px;">
                             <h3>Qual sua família?</h3>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" id="frontend" name="tec" value="frontend">
-                                <label class="form-check-label" for="frontend">Família Frontend</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" id="backend" name="tec" value="backend">
-                                <label class="form-check-label" for="backend">Família Backend</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" id="fullstack" name="tec"
-                                    value="fullstack">
-                                <label class="form-check-label" for="fullstack">Família Fullstack</label>
+                            <div class="family-flex">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="frontend" name="tec"
+                                        value="frontend">
+                                    <label class="form-check-label" for="frontend">Família Frontend</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="backend" name="tec"
+                                        value="backend">
+                                    <label class="form-check-label" for="backend">Família Backend</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="fullstack" name="tec"
+                                        value="fullstack">
+                                    <label class="form-check-label" for="fullstack">Família Fullstack</label>
+                                </div>
                             </div>
                         </div>
                         <div>
@@ -113,8 +119,8 @@
                 </section>
                 <hr>
                 <h3>Como você avalia o Acampamento Crespo-Sangue?</h3>
-                <section style="justify-content: space-between;">
-                    <div class="form-check">
+                <section class="nps" style="justify-content: space-between;">
+                    <div class="form-check um">
                         <input class="form-check-input" type="radio" id="Um" name="radionps" value="Um">
                         <label class="form-check-label" for="Um">1</label>
                     </div>
@@ -156,7 +162,8 @@
                     </div>
                 </section>
                 <div class="form-floating comentario">
-                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px;"></textarea>
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                        style="height: 100px;"></textarea>
                     <label for="floatingTextarea2">Deixe seu comentário</label>
                 </div>
                 <div class="form-check" style="margin-top: 24px;">
