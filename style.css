@@ -132,3 +132,13 @@ h3 {
     width: 80%;
     margin-top: 32px;
 }
+
+footer p {
+    margin-top: 16px;
+    margin-bottom: 0;
+    background-color: #3a3a3a;
+    font-family: 'Marcellus';
+    text-align: center;
+    color: #ffffff;
+    padding: 16px;
+}
