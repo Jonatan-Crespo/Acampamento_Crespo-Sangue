@@ -1,3 +1,4 @@
+//JSON
 const nomesChales = {
     items: [
         'Selecione seu chalé',
@@ -16,5 +17,16 @@ const nomesChales = {
     ]
 }
 
-const chales = document.getElementById('selectChale');
-console.log(chales);
+
+// Puxar as opções do chalé do objeto nomeChales
+function createSelectChales() {
+    const chales = document.getElementById('selectChale');
+    // console.log(chales);
+    for (let i = 0; i < nomesChales.items.length; i += 1) {
+        const newChale = document.createElement('option');
+        newChale.innerText = nomesChales.items[i];
+        chales.appendChild(newChale);
+    }
+}
+
+createSelectChales();
