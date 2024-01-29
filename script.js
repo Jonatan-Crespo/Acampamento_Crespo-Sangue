@@ -1,0 +1,20 @@
+const nomesChales = {
+    items: [
+        'Selecione seu chalé',
+        'Chalé 01 - GitZeus',
+        'Chalé 02 - GitZeus',
+        'Chalé 03 - GitZeus',
+        'Chalé 04 - GitZeus',
+        'Chalé 05 - GitZeus',
+        'Chalé 06 - GitZeus',
+        'Chalé 07 - GitZeus',
+        'Chalé 08 - GitZeus',
+        'Chalé 09 - GitZeus',
+        'Chalé 10 - GitZeus',
+        'Chalé 11 - GitZeus',
+        'Chalé 12 - GitZeus'
+    ]
+}
+
+const chales = document.getElementById('selectChale');
+console.log(chales);
