@@ -1,19 +1,30 @@
-# Página Acampamento Crespo-Sangue
+# 🏕️ Página Acampamento Crespo-Sangue
 
-Esse repositório tem como objetivo, criar uma landing page de formulário para avaliação de curso, onde o usuário possa colocar seus dados e o botão só estará disponível quando ele aceitar os termos. O repositório oferece um formulário simples onde os usuários podem:<br><br>
+Esse repositório tem como objetivo, criar uma landing page responsiva de formulário para avaliação de curso,, onde o usuário possa colocar seus dados e o botão só estará disponível quando ele aceitar os termos. O repositório oferece um formulário simples.<br><br>
+
+## 📝 Layout definido e seus responsivos.
+<details>
+  <summary><strong>🪄 Design final e seu responsivo </strong></summary><br />
+
+
+![Página do Acampamento Crespo-Sangue](./pagina-principal1.png)
+![Página do Acampamento Crespo-Sangue](./Acampamento-Responsivos1.png)
+
+
+</details>
 
 ## 💻  Funcionalidades
-- `Colocar seus dados: ` O usuário coloca seus dados para poder avaliar o curso.
-- `Botão disabled: ` O botão só estará disponível caso o usuário concorde com o uso das informações .
-- `É enviado os dados: ` O usuário pode revisar os dados que colocou.
+- `Colocar seus dados:` O usuário coloca seus dados para poder avaliar o curso.
+- `Botão disabled:` O botão só estará disponível caso o usuário concorde com o uso das informações .
+- `É enviado os dados:` O usuário pode revisar os dados que colocou.
 <br><br>
 
 ## 👨‍💻 Como Usar
 1. **Clone o Repositório:** `git clone git@github.com:Jonatan-Crespo/Acampamento_Crespo-Sangue.git`
 2. **Acesse o Diretório do Projeto:** `cd Acampamento_Crespo-Sangue`
 3. **Abra o Aplicativo:** Abra o arquivo `index.html` no seu navegador web preferido.
-4. **Coloque seus dados** preencha o formulário, para poder habilitar o botão e enviar os dados.
-5. **Envie os dados** Revise seus dados após enviados, em uma modal.
+4. **Coloque seus dados:** Preencha o formulário, para poder habilitar o botão e enviar os dados.
+5. **Envie os dados:** Envie e revise seus dados, em uma modal de revisão.
 <br><br>
 
 ## 🎨 Exemplo de como ficou o projeto
