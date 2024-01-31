@@ -11,6 +11,10 @@ header {
     display: flex;
 }
 
+.login{
+    display: none;
+}
+
 h1 {
     font-family: 'Marcellus';
     line-height: 24px;
@@ -190,6 +194,10 @@ footer p {
         display: none;
     }
 
+    .login{
+        display: block;
+    }
+
     section {
         width: 100%;
     }
@@ -215,6 +223,7 @@ footer p {
 @media screen and (max-width: 600px) {
     header {
         padding: 16px;
+        align-items: center;
     }
 
     h1 {
@@ -292,4 +301,8 @@ footer p {
         font-size: 14px;
     }
 
+    .login{
+        font-size: 14px;
+        height: 48px;
+    }
 }
