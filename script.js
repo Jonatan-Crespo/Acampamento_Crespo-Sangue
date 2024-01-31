@@ -1,4 +1,4 @@
-//JSON
+//Lista dos Chalés
 const nomesChales = {
     items: [
         'Selecione seu chalé',
@@ -18,16 +18,17 @@ const nomesChales = {
 }
 
 window.onload = () => {
+
     // Puxar as opções do chalé do objeto nomeChales
-    const selectChale = document.getElementById('selectChale');
-    function createSelectChales() {
-        for (let i = 0; i < nomesChales.items.length; i += 1) {
+    function createSelectChales(data) {
+        const selectChale = document.getElementById('selectChale');
+        for (let i = 0; i < data.items.length; i += 1) {
             const newChale = document.createElement('option');
-            newChale.innerText = nomesChales.items[i];
+            newChale.innerText = data.items[i];
             selectChale.appendChild(newChale);
         }
     }
-    createSelectChales();
+    createSelectChales(nomesChales);
 
 
     //Habilitar o botão de enviar
@@ -39,16 +40,70 @@ window.onload = () => {
             const checkboxAgree = checkbox.checked;
             if (checkboxAgree) {
                 document.getElementById('button').disabled = false;
-            }else{
+            } else {
                 document.getElementById('button').disabled = true;
             }
-            // console.log(checkboxAgree);
         });
     };
     enabledButton();
 
+    // Enviar os dados preenchidos
+    const formulario = document.getElementById('formulario');
+    formulario.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const nome = document.getElementById('nome').value;
+        const sobrenome = document.getElementById('sobrenome').value;
+        const email = document.getElementById('email').value;
+        const chale = document.getElementById('selectChale').value;
+        const coment = document.getElementById('floatingTextarea2').value;
+        const agreeCheck = document.getElementById('agree').checked;
 
+        // Pegar valor RadioTec
+        function valueRadioTec() {
+            const radio = document.getElementsByName('tec');
+            let valorRadio;
+            for (let i = 0; i < radio.length; i += 1) {
+                if (radio[i].checked) {
+                    valorRadio = radio[i].value;
+                    break;
+                }
+            }
+            console.log(valorRadio);
+        }
 
+        // Pegar os valores do checkbox
+        function checkboxLearning(){
+            const checkbox = document.getElementsByName('checkboxGroup');
+            let valueCheckbox = [];
+            for(let i = 0; i < checkbox.length; i+=1){
+                if(checkbox[i].checked){
+                    valueCheckbox.push(checkbox[i].value);
+                }
+            }
+            console.log(valueCheckbox);
+        }
+
+        // Pegar valor NPS
+        function valueNPS() {
+            const radioNPS = document.getElementsByName('radionps');
+            let valorRadioNPS;
+            for (let i = 0; i < radioNPS.length; i += 1) {
+                if (radioNPS[i].checked) {
+                    valorRadioNPS = radioNPS[i].value;
+                    break;
+                }
+            }
+            console.log(valorRadioNPS);
+        }
+        
+
+        valueRadioTec();
+        valueNPS();
+        checkboxLearning();
+        console.log(nome, sobrenome, email, chale);
+        console.log(coment);
+        console.log(agreeCheck);
+    })
 
     // // Evento de submeter o formulário
     // const pullForm = getElementById('formulario');
