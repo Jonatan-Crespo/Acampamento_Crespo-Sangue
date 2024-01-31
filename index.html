@@ -36,22 +36,22 @@
     </header>
     <main class="content">
         <div>
-            <form action="" method="get" id="form">
+            <form action="" method="get" id="formulario">
                 <h2>Formulário de avaliação</h2>
                 <section>
                     <div class="form-floating mb-3">
-                        <input type="text" id="floatingNome" class="form-control" placeholder="Digite seu nome">
-                        <label for="floatingInput">Nome</label>
+                        <input type="text" id="nome" name="nome" class="form-control" placeholder="Digite seu nome">
+                        <label for="nome">Nome</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="text" id="floatingSobre" name="sobrenome" class="form-control"
+                        <input type="text" id="sobrenome" name="sobrenome" class="form-control"
                             placeholder="Digite seu sobrenome">
-                        <label for="floatingInput">Sobrenome</label>
+                        <label for="sobrenome">Sobrenome</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="email" id="floatingEmail" name="email" class="form-control"
+                        <input type="email" id="email" name="email" class="form-control"
                             placeholder="Digite seu e-mail">
-                        <label for="floatingInput">E-mail</label>
+                        <label for="email">E-mail</label>
                     </div>
                     <div class="form-floating mb-3">
                         <select id="selectChale" name="chale" class="form-select chale"
@@ -163,11 +163,11 @@
                     <label for="floatingTextarea2">Deixe seu comentário</label>
                 </div>
                 <div class="form-check" style="margin-top: 24px;">
-                    <input class="form-check-input" type="checkbox" id="agree" name="agree" value="agree">
+                    <input class="form-check-input" type="checkbox" id="agree" name="agree">
                     <label class="form-check-label" for="agree">Você concorda com o uso das informações
                         acima?</label>
                 </div>
-                <button type="submit" class="btn btn-primary">Enviar</button>
+                <button type="submit" id="button" class="btn btn-primary">Enviar</button>
             </form>
         </div>
         <img src="./Imagens/BRASÃO.png" class="brasao">

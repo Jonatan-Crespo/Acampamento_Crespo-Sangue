@@ -146,6 +146,7 @@ footer p {
     width: 30%;
 }
 
+
 @media screen and (max-width: 1024px) {
     .brasao {
         display: none;
