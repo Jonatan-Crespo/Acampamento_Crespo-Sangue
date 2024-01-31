@@ -30,7 +30,6 @@ window.onload = () => {
     }
     createSelectChales(nomesChales);
 
-
     //Habilitar o botão de enviar
     document.getElementById('button').disabled = true;
 
@@ -49,85 +48,91 @@ window.onload = () => {
 
     // Enviar os dados preenchidos
     const formulario = document.getElementById('formulario');
+
     formulario.addEventListener('submit', (event) => {
         event.preventDefault();
-        const nome = document.getElementById('nome').value;
-        const sobrenome = document.getElementById('sobrenome').value;
-        const email = document.getElementById('email').value;
-        const chale = document.getElementById('selectChale').value;
-        const coment = document.getElementById('floatingTextarea2').value;
-        const agreeCheck = document.getElementById('agree').checked;
-
-        // Pegar valor RadioTec
-        function valueRadioTec() {
-            const radio = document.getElementsByName('tec');
-            let valorRadio;
-            for (let i = 0; i < radio.length; i += 1) {
-                if (radio[i].checked) {
-                    valorRadio = radio[i].value;
-                    break;
-                }
+        const dataForm = ['Nome:', 'Sobrenome:', 'E-mail:', 'Chalé:', 'Qual sua família:', 'Conteúdo quer aprender:', 'Avaliação:', 'Comentário:']
+        const allInputs = document.querySelectorAll('.inputs');
+        for (let i = 0; i < allInputs.length; i += 1) {
+            const element = allInputs[i];
+            if (dataForm[i] === 'Qual sua família:') {
+                openModal(`${dataForm[i]} ${valueRadioTec()}`);
+            } else if (dataForm[i] === 'Conteúdo quer aprender:') {
+                openModal(`${dataForm[i]} ${checkboxLearning()}`);
+            } else if (dataForm[i] === 'Avaliação:') {
+                openModal(`${dataForm[i]} ${valueNPS()}`);
+            } else {
+                openModal(`${dataForm[i]} ${element.value}`);
             }
-            console.log(valorRadio);
         }
 
-        // Pegar os valores do checkbox
-        function checkboxLearning(){
-            const checkbox = document.getElementsByName('checkboxGroup');
-            let valueCheckbox = [];
-            for(let i = 0; i < checkbox.length; i+=1){
-                if(checkbox[i].checked){
-                    valueCheckbox.push(checkbox[i].value);
-                }
-            }
-            console.log(valueCheckbox);
-        }
-
-        // Pegar valor NPS
-        function valueNPS() {
-            const radioNPS = document.getElementsByName('radionps');
-            let valorRadioNPS;
-            for (let i = 0; i < radioNPS.length; i += 1) {
-                if (radioNPS[i].checked) {
-                    valorRadioNPS = radioNPS[i].value;
-                    break;
-                }
-            }
-            console.log(valorRadioNPS);
-        }
-        
-
-        valueRadioTec();
-        valueNPS();
-        checkboxLearning();
-        console.log(nome, sobrenome, email, chale);
-        console.log(coment);
-        console.log(agreeCheck);
     })
 
-    // // Evento de submeter o formulário
-    // const pullForm = getElementById('formulario');
-    // pullForm.addEventListener('submit', (event) => {
-    //     alert('Arroz');
-    // });
+    // Função para retornar o valor do radio tecnologia
+    function valueRadioTec() {
+        const radio = document.getElementsByName('tec');
+        let valorRadio;
+        for (let i = 0; i < radio.length; i += 1) {
+            if (radio[i].checked) {
+                valorRadio = radio[i].value;
+                break;
+            }
+        }
+        return valorRadio;
+    }
 
-    // function getValueForm(inputValue) {
-    //     const valueInput = document.createElement('li');
-    //     valueInput.innerText = inputValue;
-    //     textsInput.appendChild(valueInput);
+    // Função para retornar os valores do checkbox
+    function checkboxLearning() {
+        const checkbox = document.getElementsByName('checkboxGroup');
+        let valueCheckbox = [];
+        for (let i = 0; i < checkbox.length; i += 1) {
+            if (checkbox[i].checked) {
+                valueCheckbox.push(checkbox[i].value);
+            }
+        }
+        return valueCheckbox;
+    }
 
-    // };
+    // Função para retornar o valor do NPS
+    function valueNPS() {
+        const radioNPS = document.getElementsByName('radionps');
+        let valorRadioNPS;
+        for (let i = 0; i < radioNPS.length; i += 1) {
+            if (radioNPS[i].checked) {
+                valorRadioNPS = radioNPS[i].value;
+                break;
+            }
+        }
+        return valorRadioNPS;
+    }
 
-    // function findChale() {
-    //     let chale;
-    //     for (let i = 0; i < nomesChales.items.length; i += 0) {
-    //         if (selectChale.value === nomesChales.items[i]) {
-    //             chale = nomesChales.items[i];
-    //         }
-    //     }
+    // Função para modal de resultado aparecer
+    const modal = document.getElementById('simpleModal');
 
-    // }
+    function openModal(inputValue) {
+        const lista = document.getElementById('resultado');
+        const conteudo = document.createElement('li');
+        conteudo.innerText = inputValue;
+        lista.appendChild(conteudo);
+        modal.style.display = 'block';
+    }
 
+    // Função para fechar o modal no icone X
+    function closeModal() {
+        const close = document.getElementById('closeBtn');
+        close.addEventListener('click', () => {
+            modal.style.display = 'none';
+            location.reload();
+
+        })
+        window.addEventListener('click', (event) => {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+                location.reload();
+            }
+        })
+    }
+    closeModal();
 }
 
 
